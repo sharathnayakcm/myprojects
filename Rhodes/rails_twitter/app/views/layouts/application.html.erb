@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RailsTwitter</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+  <%#if current_user%>
+  <%#*<b><%=  current_user.login%></b> |%>
+  <%#*<b><%=  link_to "My Tweets",user_path(current_user) %></b>|%>
+  <b><%=  link_to "Users list",users_path %></b>
+  
+  <div style="float:right;">
+<%#=link_to "logout",:logout%>
+    </div>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Twitters</h1>
+    <a href="<%= Rho::RhoConfig.start_path %>" class="ui-btn-left" data-icon="home" data-direction="reverse" <%= "data-ajax='false'" if is_bb6 %>>
+      Home
+    </a>
+    <a href="<%= url_for :action => :new %>" class="ui-btn-right" data-icon="plus">
+      New
+    </a>
+  </div>
+
+  <form method="POST" action="<%= url_for :action=> :search %>">
+    <label class="fieldLabel">Enter Twitter User Name</label>
+    <input type="text" name="twitter[username]"/>
+    <input type="submit" value="Search"/>
+  </form>
+
+
+  <div data-role="content">
+    <ul data-role="listview">
+      <%if !@twitters.nil?%>
+        <% @twitters.each do |twitter| %>
+          <li>
+            <%= twitter['text'] %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+
+</div>

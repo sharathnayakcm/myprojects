@@ -1,0 +1,20 @@
+<div data-role="page">
+
+	<div data-role="header" data-position="inline">
+    <h1>Albums</h1>
+    <a href="<%= url_for :action => :index %>" class="fade" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+	</div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+        <% @album_list.each do |a| %>
+          <li>
+              <%= a['artist'] %>
+          </li>
+        <% end %>
+    </ul>
+  </div>
+
+</div>

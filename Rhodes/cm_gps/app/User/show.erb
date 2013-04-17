@@ -1,0 +1,49 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @user.name %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @user.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Name</div>
+            <div class="itemValue"><%= @user.name %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Password</div>
+            <div class="itemValue"><%= @user.password %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Hometown</div>
+            <div class="itemValue"><%= @user.hometown %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">CurrentLoc</div>
+            <div class="itemValue"><%= @user.current_loc %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Long</div>
+            <div class="itemValue"><%= @user.long %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Lat</div>
+            <div class="itemValue"><%= @user.lat %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

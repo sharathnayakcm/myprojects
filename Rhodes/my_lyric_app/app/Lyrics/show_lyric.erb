@@ -1,0 +1,16 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @lyric['title'] %></h1>
+    <a href="<%= url_for :action => :track_list %>" class="fade" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      <li><%= @lyric['lyrics'].to_s.gsub("\r\n", "<br />") %></li>
+    </ul>
+  </div>
+
+</div>

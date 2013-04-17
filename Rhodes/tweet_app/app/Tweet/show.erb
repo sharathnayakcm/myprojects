@@ -1,0 +1,20 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1>Tweet</h1>
+    <a href="<%= url_for :action => :tweet_list, :query => {:user_id => @user_id} %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+          <li>
+            <div class="itemLabel">Message</div>
+            <div class="itemValue"><%= @tweet['tweet']['tweet'] %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

@@ -1,0 +1,48 @@
+                 tweets GET    /tweets(.:format)                  {:controller=>"tweets", :action=>"index"}
+                 tweets POST   /tweets(.:format)                  {:controller=>"tweets", :action=>"create"}
+              new_tweet GET    /tweets/new(.:format)              {:controller=>"tweets", :action=>"new"}
+             edit_tweet GET    /tweets/:id/edit(.:format)         {:controller=>"tweets", :action=>"edit"}
+                  tweet GET    /tweets/:id(.:format)              {:controller=>"tweets", :action=>"show"}
+                  tweet PUT    /tweets/:id(.:format)              {:controller=>"tweets", :action=>"update"}
+                  tweet DELETE /tweets/:id(.:format)              {:controller=>"tweets", :action=>"destroy"}
+          user_sessions GET    /user_sessions(.:format)           {:controller=>"user_sessions", :action=>"index"}
+          user_sessions POST   /user_sessions(.:format)           {:controller=>"user_sessions", :action=>"create"}
+       new_user_session GET    /user_sessions/new(.:format)       {:controller=>"user_sessions", :action=>"new"}
+      edit_user_session GET    /user_sessions/:id/edit(.:format)  {:controller=>"user_sessions", :action=>"edit"}
+           user_session GET    /user_sessions/:id(.:format)       {:controller=>"user_sessions", :action=>"show"}
+           user_session PUT    /user_sessions/:id(.:format)       {:controller=>"user_sessions", :action=>"update"}
+           user_session DELETE /user_sessions/:id(.:format)       {:controller=>"user_sessions", :action=>"destroy"}
+       user_follow_user GET    /users/:id/user_follow(.:format)   {:controller=>"users", :action=>"user_follow"}
+                  users GET    /users(.:format)                   {:controller=>"users", :action=>"index"}
+                  users POST   /users(.:format)                   {:controller=>"users", :action=>"create"}
+               new_user GET    /users/new(.:format)               {:controller=>"users", :action=>"new"}
+              edit_user GET    /users/:id/edit(.:format)          {:controller=>"users", :action=>"edit"}
+                   user GET    /users/:id(.:format)               {:controller=>"users", :action=>"show"}
+                   user PUT    /users/:id(.:format)               {:controller=>"users", :action=>"update"}
+                   user DELETE /users/:id(.:format)               {:controller=>"users", :action=>"destroy"}
+                  login        /login(.:format)                   {:controller=>"user_sessions", :action=>"new"}
+                 logout        /logout(.:format)                  {:controller=>"user_sessions", :action=>"destroy"}
+              users_new GET    /users/new(.:format)               {:controller=>"users", :action=>"new"}
+      user_sessions_new GET    /user_sessions/new(.:format)       {:controller=>"user_sessions", :action=>"new"}
+        login_api_users POST   /api/users/login(.:format)         {:controller=>"api/users", :action=>"login"}
+  user_tweets_api_users GET    /api/users/user_tweets(.:format)   {:controller=>"api/users", :action=>"user_tweets"}
+  user_follow_api_users POST   /api/users/user_follow(.:format)   {:controller=>"api/users", :action=>"user_follow"}
+    user_list_api_users GET    /api/users/user_list(.:format)     {:controller=>"api/users", :action=>"user_list"}
+              api_users GET    /api/users(.:format)               {:controller=>"api/users", :action=>"index"}
+              api_users POST   /api/users(.:format)               {:controller=>"api/users", :action=>"create"}
+           new_api_user GET    /api/users/new(.:format)           {:controller=>"api/users", :action=>"new"}
+          edit_api_user GET    /api/users/:id/edit(.:format)      {:controller=>"api/users", :action=>"edit"}
+               api_user GET    /api/users/:id(.:format)           {:controller=>"api/users", :action=>"show"}
+               api_user PUT    /api/users/:id(.:format)           {:controller=>"api/users", :action=>"update"}
+               api_user DELETE /api/users/:id(.:format)           {:controller=>"api/users", :action=>"destroy"}
+submit_tweet_api_tweets POST   /api/tweets/submit_tweet(.:format) {:controller=>"api/tweets", :action=>"submit_tweet"}
+  tweet_list_api_tweets GET    /api/tweets/tweet_list(.:format)   {:controller=>"api/tweets", :action=>"tweet_list"}
+  tweet_info_api_tweets GET    /api/tweets/tweet_info(.:format)   {:controller=>"api/tweets", :action=>"tweet_info"}
+             api_tweets GET    /api/tweets(.:format)              {:controller=>"api/tweets", :action=>"index"}
+             api_tweets POST   /api/tweets(.:format)              {:controller=>"api/tweets", :action=>"create"}
+          new_api_tweet GET    /api/tweets/new(.:format)          {:controller=>"api/tweets", :action=>"new"}
+         edit_api_tweet GET    /api/tweets/:id/edit(.:format)     {:controller=>"api/tweets", :action=>"edit"}
+              api_tweet GET    /api/tweets/:id(.:format)          {:controller=>"api/tweets", :action=>"show"}
+              api_tweet PUT    /api/tweets/:id(.:format)          {:controller=>"api/tweets", :action=>"update"}
+              api_tweet DELETE /api/tweets/:id(.:format)          {:controller=>"api/tweets", :action=>"destroy"}
+                   root        /(.:format)                        {:controller=>"users", :action=>"index"}

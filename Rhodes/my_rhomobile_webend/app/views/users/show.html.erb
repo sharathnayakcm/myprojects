@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<% if @user.photo.exists? then %>
+  <p><b>Medium:</b><%= image_tag @user.photo.url(:medium) %></p>
+<% else %>
+  <p> There are no photo's attached, upload one. </p>
+<% end %>
+
+<p>
+  <b>First name:</b>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Session key:</b>
+  <%= @user.session_key %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

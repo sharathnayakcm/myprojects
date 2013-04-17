@@ -1,0 +1,28 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1>New Date</h1>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @date.object %>"/>
+      <table>
+          
+            <tr>
+                <td class="itemLabel">Date: </td>
+                <td class="itemValue"><input type="text" name="date[date]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Time: </td>
+                <td class="itemValue"><input type="text" name="date[time]"/></td>
+            </tr>
+          
+      </table>
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

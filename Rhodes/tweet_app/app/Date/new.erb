@@ -1,0 +1,30 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @date.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @date.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="date[date]" class="fieldLabel">Date</label>
+            <input type="text" id="date[date]" name="date[date]" <%= placeholder("Date") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="date[time]" class="fieldLabel">Time</label>
+            <input type="text" id="date[time]" name="date[time]" <%= placeholder("Time") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,25 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @date.date %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @date.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Date</td>
+        <td class="itemValue"><%= @date.date%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Time</td>
+        <td class="itemValue"><%= @date.time%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

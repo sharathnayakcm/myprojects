@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?> 
+<manifest package='com.rhomobile.pimalerts' android:versionCode='10000' xmlns:android='http://schemas.android.com/apk/res/android' android:versionName='1.0' android:installLocation='auto'>
+  <application android:label='@string/app_name' android:icon='@drawable/icon' android:name='com.rhomobile.rhodes.RhodesApplication' android:debuggable='true'>
+    <!-- Main activity -->
+    <activity android:label='@string/app_name' android:configChanges='orientation|keyboardHidden' android:launchMode='singleTask' android:screenOrientation='unspecified' android:name='com.rhomobile.rhodes.RhodesActivity'>
+      <intent-filter>
+        <action android:name='android.intent.action.MAIN'/>
+        <category android:name='android.intent.category.LAUNCHER'/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name='android.intent.action.VIEW'/>
+        <category android:name='android.intent.category.BROWSABLE'/>
+        <category android:name='android.intent.category.DEFAULT'/>
+        <data android:pathPrefix='/com.rhomobile.pimalerts' android:host='rhomobile.com' android:scheme='http'/>
+      </intent-filter>
+    </activity>
+    <activity android:configChanges='orientation' android:screenOrientation='unspecified' android:theme='@style/PopupTheme' android:name='com.rhomobile.rhodes.alert.PopupActivity'/>
+    <activity android:configChanges='orientation' android:screenOrientation='unspecified' android:name='com.rhomobile.rhodes.camera.FileList'/>
+    <activity android:screenOrientation='landscape' android:name='com.rhomobile.rhodes.camera.ImageCapture'/>
+    <activity android:configChanges='orientation' android:screenOrientation='unspecified' android:name='com.rhomobile.rhodes.signature.ImageCapture'/>
+    <activity android:configChanges='orientation' android:screenOrientation='unspecified' android:name='com.rhomobile.rhodes.datetime.DateTimePickerScreen'/>
+    <activity android:configChanges='orientation' android:screenOrientation='unspecified' android:name='com.rhomobile.rhodes.mapview.MapView'/>
+    <activity android:configChanges='orientation' android:screenOrientation='unspecified' android:name='com.rhomobile.rhodes.mapview.GoogleMapView'/>
+    <activity android:configChanges='orientation' android:screenOrientation='unspecified' android:name='com.rhomobile.rhodes.bluetooth.RhoBluetoothDeviceListActivity'/>
+    <service android:name='com.rhomobile.rhodes.RhodesService'/>
+    <provider android:authorities='com.rhomobile.pimalerts' android:grantUriPermissions='false' android:name='com.rhomobile.rhodes.LocalFileProvider'>
+      <grant-uri-permission android:pathPrefix='/rhodes/apps/'/>
+    </provider>
+  </application>
+  <uses-sdk android:minSdkVersion='4'/>
+  <uses-permission android:name='android.permission.ACCESS_FINE_LOCATION'/>
+  <uses-permission android:name='android.permission.ACCESS_NETWORK_STATE'/>
+  <uses-permission android:name='android.permission.CALL_PHONE'/>
+  <uses-permission android:name='android.permission.GET_ACCOUNTS'/>
+  <uses-permission android:name='android.permission.INTERNET'/>
+  <uses-permission android:name='android.permission.PERSISTENT_ACTIVITY'/>
+  <uses-permission android:name='android.permission.READ_CONTACTS'/>
+  <uses-permission android:name='android.permission.READ_PHONE_STATE'/>
+  <uses-permission android:name='android.permission.SYSTEM_ALERT_WINDOW'/>
+  <uses-permission android:name='android.permission.VIBRATE'/>
+  <uses-permission android:name='android.permission.WAKE_LOCK'/>
+  <uses-permission android:name='android.permission.WRITE_CONTACTS'/>
+</manifest>

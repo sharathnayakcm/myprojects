@@ -1,0 +1,24 @@
+#sdk: "/var/lib/gems/1.8/gems/rhodes-3.3.1"
+sdkversion: 3.3.0
+name: first_app
+version: 1.0
+vendor: rhomobile
+build: debug
+bbver: 4.6
+applog: rholog.txt
+iphone:
+  configuration: Release
+  sdk: iphonesimulator5.0
+  provisionprofile:
+  codesignidentity:
+  entitlements:
+  BundleIdentifier: com.rhomobile.firstapp
+  BundleURLScheme: firstapp
+wp:
+  productid: '592e7b10-2496-012f-16d9-782bcb9c7e47'
+symbian:
+  uid: '0xecfcc9ef'
+android:
+  version: 2.1
+
+extensions: ["json", "another-extension"]

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<%unless @user.id == current_user.id%>
+<div><%= link_to "FOLLOW" ,user_follow_user_path(@user) %></div>
+<%end%>
+<h1><%=@user.login%> Tweets</h1>
+<div>
+<span style="float:left;">Followers:- <%=@followers unless @followers.nil?%></span>
+<span style="padding-left:20px;">Following:- <%=@following.count%></span>
+</div>
+<div style="clear:both"></div>
+<div>
+<ul>
+  <%@tweets.each do |tweets|%>
+  <li>
+  <%= tweets.tweet %>
+    <%if tweets.user_id == current_user.id%>
+    <span style="padding-left: 20px">
+    <%= link_to 'Edit', edit_tweet_path(tweets) %>
+      </span>
+<%end%>
+    </li>
+  <%end%>
+</ul>
+</div>
+<%= link_to 'New Tweet',new_tweet_path %>

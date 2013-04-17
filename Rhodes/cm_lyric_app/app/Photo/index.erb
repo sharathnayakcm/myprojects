@@ -1,0 +1,38 @@
+<div data-role="page">
+
+	<div data-role="header" data-position="inline">
+    <h1>Photos</h1>
+    <a href="<%= Rho::RhoConfig.start_path %>" class="ui-btn-left" data-icon="home" data-direction="reverse" <%= "data-ajax='false'" if is_bb6 %>>
+      Home
+    </a>
+    <a href="<%= url_for :action => :new %>" class="ui-btn-right" data-icon="plus">
+      New
+    </a>
+	</div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      <% @photo_list.each do |photo| %>
+        <li>
+          <div class="img_list_div">
+            <div class="img_div">
+              <a href="<%= url_for :action => :full_pic, :id => photo['id'] %>">
+                <img alt="<%= photo['name'] %>"  src="<%= photo['image_url'] %>" />
+              </a>
+            </div>
+            <div class="img_info_div">
+              <a href="<%= url_for :action => :full_pic, :id => photo['id'] %>">
+                <%= photo['name'] %>
+              </a> (Full Screen)<br />
+              Description :- <%= photo['description'] %> <br />
+              Uploaded by :- <%= photo['user']['firstname'] %> <%= photo['user']['lastname'] %> <br />
+
+            </div>
+            <div class="clear"></div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>

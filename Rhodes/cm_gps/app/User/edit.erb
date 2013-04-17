@@ -1,0 +1,51 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @user.name %></h1>
+    <a href="<%= url_for :action => :show, :id => @user.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @user.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @user.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="user[name]" class="fieldLabel">Name</label>
+            <input type="text" id="user[name]" name="user[name]" value="<%= @user.name %>" <%= placeholder( "Name" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="user[password]" class="fieldLabel">Password</label>
+            <input type="text" id="user[password]" name="user[password]" value="<%= @user.password %>" <%= placeholder( "Password" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="user[hometown]" class="fieldLabel">Hometown</label>
+            <input type="text" id="user[hometown]" name="user[hometown]" value="<%= @user.hometown %>" <%= placeholder( "Hometown" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="user[current_loc]" class="fieldLabel">Current loc</label>
+            <input type="text" id="user[current_loc]" name="user[current_loc]" value="<%= @user.current_loc %>" <%= placeholder( "Current loc" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="user[long]" class="fieldLabel">Long</label>
+            <input type="text" id="user[long]" name="user[long]" value="<%= @user.long %>" <%= placeholder( "Long" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="user[lat]" class="fieldLabel">Lat</label>
+            <input type="text" id="user[lat]" name="user[lat]" value="<%= @user.lat %>" <%= placeholder( "Lat" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

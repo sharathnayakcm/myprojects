@@ -1,0 +1,22 @@
+<h1>this is testing sharath</h1>
+
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @community_rating['communityRating']['name'] %></h1>
+    <a href="<%= url_for :action => :index %>" class="fade" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      <li><%= @album_rating['name'] %> has</li> <li><%=@community_rating['communityRating']['average']%> rating</li>
+    </ul>
+  </div>
+
+</div>
+
+
+<h3><%=@community_rating['communityRating']['average']%></h3>
+<h2><%#=@@get_result['album']['ratings']['average']%></h2>

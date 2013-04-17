@@ -1,0 +1,36 @@
+I/APP     (  220): I 03/15/2012 05:15:43:410 000000dc     RhoWebViewClient| Loading URL: http://localhost:44227/app/Alerts/show_popup
+I/APP     (  220): I 03/15/2012 05:15:43:430 000000e9           HttpServer| Process URI: '/app/Alerts/show_popup'
+I/APP     (  220): I 03/15/2012 05:15:43:431 000000e9                  APP| RHO serve: /app/Alerts/show_popup
+I/APP     (  220): I 03/15/2012 05:15:43:434 000000e9                  APP| "ppppppppppppppppppppppppfrrrrrrrrrrrr"
+I/APP     (  220): I 03/15/2012 05:15:43:434 000000e9                  APP| ""
+I/ActivityManager(   53): Starting activity: Intent { cmp=com.rhomobile.pimalerts/com.rhomobile.rhodes.alert.PopupActivity (has extras) }
+D/PhoneWindow(  220): couldn't save which view has focus because the focused view android.webkit.WebView@44ec1490 has no id.
+D/RhodesActivity(  220): RhodesActivity.onPause()
+D/dalvikvm(  220): +++ not scanning '/system/lib/libwebcore.so' for 'callUiDestroyedCallback' (wrong CL)
+D/dalvikvm(  220): +++ not scanning '/system/lib/libmedia_jni.so' for 'callUiDestroyedCallback' (wrong CL)
+D/dalvikvm(  220): +++ not scanning '/system/lib/libexif.so' for 'callUiDestroyedCallback' (wrong CL)
+I/APP     (  220): I 03/15/2012 05:15:43:521 000000e9 RHO AlertsController| Layout file: /data/data/com.rhomobile.pimalerts/rhodata/apps/app/layout_erb.iseq. Content size: 2140
+I/APP     (  220): I 03/15/2012 05:15:43:556 000000e9           HttpServer| Process URI: '/system/uidestroyed'
+I/APP     (  220): I 03/15/2012 05:15:43:571 000000dc         AppActivated| Handlers have completed.
+I/APP     (  220): I 03/15/2012 05:15:43:571 000000dc    RhodesApplication| New UiState: MainActivityPaused
+D/RhodesService(  220): +++ onStartCommand
+I/RhodesService(  220): handleCommand: startId=2, source=com.rhomobile.rhodes.BaseActivity
+D/RhodesService(  220): New activity was created
+I/ARMAssembler(   53): generated scanline__00000077:03515104_00000000_00000000 [ 33 ipp] (47 ins) at [0x41fd50:0x41fe0c] in 410596 ns
+I/ARMAssembler(   53): generated scanline__00000177:03515104_00001001_00000000 [ 91 ipp] (114 ins) at [0x420ec0:0x421088] in 723346 ns
+I/ActivityManager(   53): Displayed activity com.rhomobile.pimalerts/com.rhomobile.rhodes.alert.PopupActivity: 392 ms (total 392 ms)
+D/RhodesActivity(  220): RhodesActivity.onResume()
+D/dalvikvm(   53): GC freed 36835 objects / 1740672 bytes in 101ms
+D/dalvikvm(   92): GC freed 12381 objects / 574880 bytes in 81ms
+D/dalvikvm(   53): GC freed 26396 objects / 1243568 bytes in 83ms
+D/dalvikvm(   92): GC freed 14767 objects / 655592 bytes in 57ms
+D/dalvikvm(   53): GC freed 25906 objects / 1213704 bytes in 87ms
+D/dalvikvm(   53): GC freed 26134 objects / 1220560 bytes in 85ms
+D/dalvikvm(   92): GC freed 13527 objects / 596944 bytes in 46ms
+D/dalvikvm(   53): GC freed 26081 objects / 1218840 bytes in 80ms
+D/dalvikvm(   92): GC freed 13383 objects / 597008 bytes in 52ms
+D/dalvikvm(   53): GC freed 26198 objects / 1238696 bytes in 85ms
+D/dalvikvm(   53): GC freed 26110 objects / 1219440 bytes in 88ms
+D/dalvikvm(   92): GC freed 13290 objects / 596072 bytes in 48ms
+D/dalvikvm(   53): threadid=15: bogus mon 1+0>0; adjusting
+D/dalvikvm(   53): GC freed 26119 objects / 1219560 bytes in 84ms

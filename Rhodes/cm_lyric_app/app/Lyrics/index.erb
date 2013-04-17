@@ -1,0 +1,29 @@
+<div data-role="page">
+
+	<div data-role="header" data-position="inline">
+    <h1>Lyricses</h1>
+    <a href="<%= Rho::RhoConfig.start_path %>" class="ui-btn-left" data-icon="home" data-direction="reverse" <%= "data-ajax='false'" if is_bb6 %>>
+      Home
+    </a>
+	</div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      <% if @band_list.size > 0 %>
+        <% @band_list.each do |b| %>
+          <li>
+            <%= b['name'] %>
+            <a href="<%= url_for :action => :get_album_rating, :id => b['id'] %>">
+              rating
+            </a>
+          </li>
+        <% end %>
+      <% else %>
+        <li>
+          Sorry no result matched.
+        </li>
+      <%  end %>
+    </ul>
+  </div>
+
+</div>

@@ -1,0 +1,37 @@
+<div data-role="page">
+
+	<div data-role="header" data-position="inline">
+    <h1>Profile</h1>
+	</div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      <li>
+        <a href="<%= url_for :action => :user_info, :id => @user_info['id'], :query => {:goto => 'show'} %>">
+          Profile Info
+        </a>
+      </li>
+      <li>
+        <a href="<%= url_for :controller => :Tweet, :action => :tweet_list, :query => {:id => @user_info['id']} %>">
+          Tweet
+        </a>
+      </li>
+      <li>
+        <a href="<%= url_for :controller => :Tweet, :action => :get_user_list, :query => {:id => @user_info['id']}  %>">
+          User_list
+        </a>
+      </li>
+      <li>
+        <a href="<%= url_for :controller => :Datetime, :action => :index,  %>">
+          Date
+        </a>
+      </li>
+       <li>
+        <a href="<%= url_for :action => :check_log, :query => {:user_id => @user_info['id']} %>">
+          Log
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</div>

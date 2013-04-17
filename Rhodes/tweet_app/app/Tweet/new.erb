@@ -1,0 +1,31 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New Tweet</h1>
+    <a href="<%= url_for :action => :tweet_list, :query => {:user_id => @user_id} %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul>
+           <li>
+            <a href="<%= url_for :action => :show_popup %>">
+                <span class="title">Show Popup</span>
+                <span class="disclosure_indicator"></span>
+            </a>
+        </li>
+</ul>
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" id="tweet[user_id]" name="tweet[user_id]" value="<%= @user_id %>"/>
+
+          <div data-role="fieldcontain">
+            <label for="tweet[message]" class="fieldLabel">Message</label>
+            <input type="text" id="tweet[message]" name="tweet[tweet]" <%= placeholder("tweets") %> />
+          </div>
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

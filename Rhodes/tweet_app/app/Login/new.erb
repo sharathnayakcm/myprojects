@@ -1,0 +1,31 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Login</h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :login %>">
+      <input type="hidden" name="id" value="<%= @login.object %>"/>
+
+          <div data-role="fieldcontain">
+            <div class="errorMessage"></div>
+          </div>
+          <div data-role="fieldcontain">
+            <label for="login[username]" class="fieldLabel">Email</label>
+            <input type="text" id="username" name="login[username]" <%= placeholder("Username") %> />
+          </div>
+          <div data-role="fieldcontain">
+            <label for="login[password]" class="fieldLabel">Password</label>
+            <input type="text" id="password" name="login[password]" <%= placeholder("Password") %> />
+          </div>
+      
+
+      <input type="submit" value="Login" />
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,36 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @location.name %></h1>
+    <a href="<%= url_for :action => :show, :id => @location.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @location.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @location.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="location[name]" class="fieldLabel">Name</label>
+            <input type="text" id="location[name]" name="location[name]" value="<%= @location.name %>" <%= placeholder( "Name" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="location[long]" class="fieldLabel">Long</label>
+            <input type="text" id="location[long]" name="location[long]" value="<%= @location.long %>" <%= placeholder( "Long" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="location[lati]" class="fieldLabel">Lati</label>
+            <input type="text" id="location[lati]" name="location[lati]" value="<%= @location.lati %>" <%= placeholder( "Lati" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

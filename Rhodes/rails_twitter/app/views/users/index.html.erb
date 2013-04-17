@@ -1,0 +1,16 @@
+<h1>Listing Users</h1>
+
+<table>
+
+<% @user.each do |user| %>
+  <tr>
+    <td><%= link_to user.login, user %></td>
+    <td></td>
+    <%#= link_to 'Edit', edit_user_path(user) %>
+    <%#*<td><%= link_to 'Destroy', tweet, :confirm => 'Are you sure?', :method => :delete %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

@@ -1,0 +1,26 @@
+<div data-role="page">
+
+	<div data-role="header" data-position="inline">
+    <h1><%= @track_list['title'] %></h1>
+    <a href="<%= url_for :action => :album_list %>" class="fade" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+	</div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      <% if !@track_list['tracks'].nil? && @track_list['tracks'].size > 0 %>
+        <% @track_list['tracks'].each do |t| %>
+          <li>
+            <a href="<%= url_for :action => :track_info, :id => t['track_id'] %>">
+              <%= t['title'] %>
+            </a>
+          </li>
+        <% end %>
+      <% else %>
+        <li> No tracks available. </li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>

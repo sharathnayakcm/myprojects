@@ -1,0 +1,26 @@
+--- 
+capabilities: 
+- gps
+bbver: 4.6
+version: 1.0
+sdkversion: 3.3.0
+wmsdk: Windows Mobile 6 Professional SDK (ARMV4I)
+vendor: rhomobile
+iphone: 
+  provisionprofile: 
+  entitlements: 
+  emulator: 4.0.2
+  configuration: Debug
+  codesignidentity: 
+  sdk: iphonesimulator4.0
+android: 
+  version: 2.1
+  apikey: 0XQWyyS-EuzNkpSZgoFhFcOLBPi0fN_OcA_Szsg
+  mapping: true
+extensions: 
+- extension-name-here
+- second-extension-name
+applog: rholog.txt
+name: contact
+build: debug
+sdk: /var/lib/gems/1.8/gems/rhodes-3.3.1

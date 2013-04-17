@@ -1,0 +1,26 @@
+<div data-role="page">
+
+	<div data-role="header" data-position="inline">
+    <h1>Albums</h1>
+    <a href="<%= url_for :action => :index %>" class="fade" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+	</div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      <% if @album_list.size > 0 %>
+        <% @album_list.each do |a| %>
+          <li>
+            <a href="<%= url_for :action => :album_info, :id => a['album_id'] %>">
+              <%= a['title'] %>
+            </a>
+          </li>
+        <% end %>
+      <% else %>
+        <li> No Albums available </li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>
